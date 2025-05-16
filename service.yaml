@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: connectyou-backend
+  labels:
+    app: connectyou-backend
+spec:
+  type: ClusterIP
+  selector:
+    app: connectyou-backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
