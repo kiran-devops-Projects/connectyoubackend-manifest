@@ -1,12 +1,12 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: connectyou-backend
+  name: connectyou-frontend
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: connectyou-backend
+    name: connectyou-frontend
   minReplicas: 1
   maxReplicas: 5
   metrics:

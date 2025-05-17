@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: connectyou-backend-ingress
+  name: connectyou-frontend-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: letsencrypt-prod
@@ -19,6 +19,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: connectyou-backend
+                name: connectyou-frontend
                 port:
                   number: 80

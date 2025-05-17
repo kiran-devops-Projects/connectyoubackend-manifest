@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: connectyou-backend
+  name: connectyou-frontend
   labels:
-    app: connectyou-backend
+    app: connectyou-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: connectyou-backend
+      app: connectyou-frontend
   template:
     metadata:
       labels:
-        app: connectyou-backend
+        app: connectyou-frontend
     spec:
       containers:
-      - name: connectyou-backend
+      - name: connectyou-frontend
         image: "615492648587.dkr.ecr.us-east-1.amazonaws.com/connectyou:7"
         imagePullPolicy: Always
         ports:
@@ -24,7 +24,7 @@ spec:
         - name: PORT
           valueFrom:
             secretKeyRef:
-              name: connectyoubackend-secrets
+              name: connectyou-frontend-secrets
               key: port
         - name: JWT_SECRET
           valueFrom:
@@ -56,12 +56,12 @@ spec:
         livenessProbe:
           httpGet:
             path: /health
-            port: 5000  
+            port: 3000  
           initialDelaySeconds: 30
           periodSeconds: 900  
         readinessProbe:
           httpGet:
             path: /health
-            port: 5000  
+            port: 3000  
           initialDelaySeconds: 5
           periodSeconds: 900
