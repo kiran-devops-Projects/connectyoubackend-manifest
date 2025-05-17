@@ -26,6 +26,11 @@ spec:
             secretKeyRef:
               name: connectyou-frontend-secrets
               key: port
+        - name: REACT_APP_BACKEND_URL
+          valueFrom:
+            secretKeyRef:
+              name: connectyou-frontend-secrets
+              key: react-backend-url
         resources:
           limits:
             memory: "512Mi"
@@ -33,15 +38,3 @@ spec:
           requests:
             memory: "256Mi"
             cpu: "250m"
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 3000  
-          initialDelaySeconds: 30
-          periodSeconds: 900  
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 3000  
-          initialDelaySeconds: 5
-          periodSeconds: 900
