@@ -9,10 +9,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - connectyou.nestsindia.com
-      secretName: connectyou-nestsindia-tls
+        - connectyoubackend.nestsindia.com
+      secretName: connectyoubackend-nestsindia-tls
   rules:
-    - host: connectyou.nestsindia.com
+    - host: connectyoubackend.nestsindia.com
       http:
         paths:
           - path: /
