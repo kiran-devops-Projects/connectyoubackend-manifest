@@ -41,6 +41,11 @@ spec:
             secretKeyRef:
               name: connectyoubackend-secrets
               key: gemini-key
+        - name: NODE_ENV
+          valueFrom:
+            secretKeyRef:
+              name: connectyoubackend-secrets
+              key: node-env
         - name: ALLOWED_ORIGINS
           valueFrom:
             secretKeyRef:
