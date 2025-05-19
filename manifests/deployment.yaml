@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: connectyou-backend
-        image: "615492648587.dkr.ecr.us-east-1.amazonaws.com/connectyou:14"
+        image: "615492648587.dkr.ecr.us-east-1.amazonaws.com/connectyou:15"
         imagePullPolicy: Always
         ports:
         - containerPort: 5000  
