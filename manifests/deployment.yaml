@@ -46,6 +46,21 @@ spec:
             secretKeyRef:
               name: connectyoubackend-secrets
               key: node-env
+        - name: EMAIL_USER
+          valueFrom:
+            secretKeyRef:
+              name: connectyou-frontend-secrets
+              key: email-user
+        - name: EMAIL_PASS
+          valueFrom:
+            secretKeyRef:
+              name: connectyou-frontend-secrets
+              key: email-pass
+        - name: FRONTEND_URL
+          valueFrom:
+            secretKeyRef:
+              name: connectyou-frontend-secrets
+              key: frontend-url
         - name: ALLOWED_ORIGINS
           valueFrom:
             secretKeyRef:
