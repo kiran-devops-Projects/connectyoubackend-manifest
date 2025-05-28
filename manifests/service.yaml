@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: connectyou-frontend
+  name: connectyou-frontend1
   namespace: test  # ✅ Add this line
   labels:
-    app: connectyou-frontend
+    app: connectyou-frontend1
 spec:
   type: ClusterIP
   selector:
-    app: connectyou-frontend
+    app: connectyou-frontend1
   ports:
     - protocol: TCP
       port: 80
