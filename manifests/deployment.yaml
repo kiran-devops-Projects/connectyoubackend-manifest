@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: connectyou-frontend
+  namespace: test
   labels:
     app: connectyou-frontend
 spec:
