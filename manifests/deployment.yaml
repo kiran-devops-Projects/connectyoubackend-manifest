@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: connectyou-frontend
+  name: connectyou-frontend1
   namespace: test
   labels:
-    app: connectyou-frontend
+    app: connectyou-frontend1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: connectyou-frontend
+      app: connectyou-frontend1
   template:
     metadata:
       labels:
-        app: connectyou-frontend
+        app: connectyou-frontend1
     spec:
       containers:
-      - name: connectyou-frontend
+      - name: connectyou-frontend1
         image: "615492648587.dkr.ecr.us-east-1.amazonaws.com/connectyoufrontend:12"
         imagePullPolicy: Always
         ports:
