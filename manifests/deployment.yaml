@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: connectyou-frontend
-        image: "615492648587.dkr.ecr.us-east-1.amazonaws.com/connectyoufrontend:22"
+        image: "615492648587.dkr.ecr.us-east-1.amazonaws.com/connectyoufrontend:23"
         imagePullPolicy: Always
         ports:
         - containerPort: 3000  
